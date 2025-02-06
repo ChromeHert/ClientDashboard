@@ -1,16 +1,14 @@
-import Image from "next/image";
-
+import { Button } from "@/components/ui/button";
 
 
 
 export default function Home() {
   return (
     <>
-      <div>
-        <strong>
-          Main Page
-        </strong>
-      </div>
+      <Button variant="outline">
+        Click Home
+      </Button>
+      
     </>
   );
 }

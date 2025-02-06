@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/ui/Sidebar";
+import { Header } from "@/components/Header";
+import Navbar from "@/components/Navbar";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -14,8 +16,8 @@ import { Sidebar } from "@/components/ui/Sidebar";
 // });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "my clients' dashboard",
+  title: "control panel",
+  description: "Admin  Dashboard",
 };
 
 const WorkSans = Work_Sans({
@@ -30,9 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${WorkSans.className} flex items-center justify-between`}>
-        <Sidebar />
-        <main className="w-full h-full p-4">
+      <body className={`${WorkSans.className} `}>
+        <main className="">
+          <Navbar />
         {children}
         </main>
       </body>    
