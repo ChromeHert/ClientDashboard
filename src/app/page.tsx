@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Button variant="outline">
-        Click Home
+       Dashboard
       </Button>
       
     </>

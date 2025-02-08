@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/ui/Sidebar";
-import { Header } from "@/components/Header";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -16,7 +15,7 @@ import Navbar from "@/components/Navbar";
 // });
 
 export const metadata: Metadata = {
-  title: "control panel",
+  title: "Admin Dashboard",
   description: "Admin  Dashboard",
 };
 
@@ -35,7 +34,14 @@ export default function RootLayout({
       <body className={`${WorkSans.className} `}>
         <main className="">
           <Navbar />
-        {children}
+          <div className="flex">
+            <div className="hidden md:block h-[100vh] w-[300px]">
+              <Sidebar />
+            </div>
+            <div className="p-5 w-full md:max-w-[1140px]">
+          {children}
+            </div>
+          </div>
         </main>
       </body>    
     </html>
