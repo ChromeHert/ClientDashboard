@@ -9,13 +9,18 @@ import {
     CommandShortcut,
   } from "@/components/ui/command"
   import Link from "next/link";
-  import { LayoutDashboard, Newspaper, Folders, CreditCard, Settings, User } from "lucide-react";
+  import { LayoutDashboard, 
+    Newspaper, 
+    Folders, 
+    CreditCard, 
+    Settings, 
+    User } from "lucide-react";
   
 
 const Sidebar = () => {
     return ( 
         <>
-            <aside>
+            <aside className="h-[100vh]">
                 <Command className="bg-secondary rounded-none">
                     <CommandInput placeholder="Type a command or search..." />
                     <CommandList>
